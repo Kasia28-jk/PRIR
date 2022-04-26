@@ -1,0 +1,25 @@
+﻿<Window x:Class="WpfApp1.WindowConfiguration"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="WindowConfiguration" Height="450" Width="800">
+    <Grid>
+        <Button Content="Zapisz" Margin="520,292,35,23" Click="Button_Click"/>
+        <TextBox x:Name="txt_NameOfQueue" TextWrapping="Wrap" Margin="160,352,438,39" Text="test2"/>
+        <Label Content="Nazwa kolejki:" HorizontalAlignment="Left" Margin="29,356,0,0" VerticalAlignment="Top" Height="43" Width="157"/>
+        <TextBox x:Name="txt_UserName" TextWrapping="Wrap" Margin="160,20,438,371" Text="quest"/>
+        <Label Content="Nazwa Użytkownika:" HorizontalAlignment="Left" Margin="29,30,0,0" VerticalAlignment="Top" Height="43" Width="157"/>
+        <TextBox x:Name="txt_Password" TextWrapping="Wrap" Margin="160,79,438,312" Text="quest"/>
+        <Label Content="Hasło:" HorizontalAlignment="Left" Margin="29,89,0,0" VerticalAlignment="Top" Height="43" Width="157"/>
+        <TextBox x:Name="txt_HostName" TextWrapping="Wrap" Margin="160,151,438,240" Text="localhost"/>
+        <Label Content="HostName:" HorizontalAlignment="Left" Margin="29,161,0,0" VerticalAlignment="Top" Height="43" Width="157"/>
+        <TextBox x:Name="txt_VHostName" TextWrapping="Wrap" Margin="160,220,438,171"/>
+        <Label Content="VHostName:" HorizontalAlignment="Left" Margin="29,230,0,0" VerticalAlignment="Top" Height="43" Width="157"/>
+        <TextBox x:Name="txt_Port" TextWrapping="Wrap" Margin="160,282,438,109" Text="5672"/>
+        <Label Content="Port:" HorizontalAlignment="Left" Margin="29,292,0,0" VerticalAlignment="Top" Height="43" Width="157"/>
+
+    </Grid>
+</Window>
