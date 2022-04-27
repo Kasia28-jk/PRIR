@@ -8,7 +8,9 @@
         Title="WindowIsPrime" Height="450" Width="800">
     <Grid>
         <Button Content="Wyślij " Margin="448,255,107,60" Click="Button_Click"/>
-        <TextBox x:Name="txt_NumberToCheck" TextWrapping="Wrap" Margin="194,64,404,327"/>
+        <TextBox x:Name="txt_NumberToCheck" TextWrapping="Wrap" Margin="194,64,404,327" Text="2"/>
         <Label Content="Podaj liczbę:" HorizontalAlignment="Left" Margin="78,64,0,0" VerticalAlignment="Top" Height="43" Width="157"/>
+        <Label Content="Podaj nazwę kolejki:" HorizontalAlignment="Left" Margin="78,148,0,0" VerticalAlignment="Top" Height="43" Width="157"/>
+        <ComboBox x:Name="cmb_Queues" Margin="194,132,404,243"/>
     </Grid>
 </Window>

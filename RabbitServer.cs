@@ -6,7 +6,8 @@ namespace WpfApp1
 {
     public class RabbitServer
     {
-        private const string QueueName = "test1";
+        private string _queueName = "test1";
+        public string QueueName { get => _queueName; set => _queueName = value; }
 
         public void SendMessage(string message)
         {
@@ -21,7 +22,7 @@ namespace WpfApp1
                 {
                     var body = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(message));
 
-                    channel.BasicPublish("", QueueName, null, body);
+                    channel.BasicPublish("", _queueName, null, body);
                 }
             }
         }

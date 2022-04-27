@@ -8,7 +8,7 @@ namespace WpfApp1
         {
             InitializeComponent();
         }
-
+       
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             var win = new WindowFibonacci();

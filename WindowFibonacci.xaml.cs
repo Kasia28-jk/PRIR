@@ -1,17 +1,23 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows;
 
 namespace WpfApp1
 {
     public partial class WindowFibonacci : Window
     {
+        private QueueProvider _queueProvider = new();
+        private List<string> _queueToDisplay;
         public WindowFibonacci()
         {
             InitializeComponent();
+            _queueToDisplay = _queueProvider.LoadList();
+            cmb_Queues.ItemsSource = _queueToDisplay;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            var queue = (string)cmb_Queues.SelectedItem;
             int value;
             const string name = "Fibonacci ";
             try
@@ -26,6 +32,10 @@ namespace WpfApp1
 
             var message = name + value;
             var connection = new RabbitServer();
+            if (queue != null)
+            {
+                connection.QueueName = queue;
+            }
             connection.SendMessage(message);
         }
     }

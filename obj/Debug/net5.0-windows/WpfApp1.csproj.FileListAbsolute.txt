@@ -29,3 +29,6 @@ D:\PrazaInz\WpfApp1\bin\Debug\net5.0-windows\Microsoft.Extensions.Logging.Abstra
 D:\PrazaInz\WpfApp1\obj\Debug\net5.0-windows\WindowIsPrime.g.cs
 D:\PrazaInz\WpfApp1\obj\Debug\net5.0-windows\WindowIsPrime.baml
 D:\PrazaInz\WpfApp1\obj\Debug\net5.0-windows\WindowConfiguration.g.cs
+D:\PrazaInz\WpfApp1\obj\Debug\net5.0-windows\WindowAddToListQueues.g.cs
+D:\PrazaInz\WpfApp1\obj\Debug\net5.0-windows\WindowConfiguration.baml
+D:\PrazaInz\WpfApp1\obj\Debug\net5.0-windows\WindowAddToListQueues.baml
