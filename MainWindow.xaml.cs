@@ -4,9 +4,11 @@ namespace WpfApp1
 {
     public partial class MainWindow : Window
     {
+        private readonly DataContext _context;
         public MainWindow()
         {
             InitializeComponent();
+            _context = new DataContext();
         }
        
         private void Button_Click_1(object sender, RoutedEventArgs e)
