@@ -10,7 +10,7 @@
         <Button Content="Wybierz" Margin="238,51,482,337" Click="Button_Click_1"/>
         <Label Content="Fibonacci" HorizontalAlignment="Left" Margin="36,61,0,0" VerticalAlignment="Top" Width="98"/>
         <Button Content="Wybierz" Margin="238,127,482,261" Click="Button_Click_2"/>
-        <Label Content="Czy liczba jest pierwsza" HorizontalAlignment="Left" Margin="36,137,0,0" VerticalAlignment="Top" Width="143"/>
+        <Label Content="Czy liczba jest pierwsza?" HorizontalAlignment="Left" Margin="36,137,0,0" VerticalAlignment="Top" Width="143"/>
         <Button Content="Config" Margin="238,346,482,42" Click="Button_Click_Config"/>
         <Label Content="Konfiguracja:" HorizontalAlignment="Left" Margin="36,356,0,0" VerticalAlignment="Top" Width="143"/>
         <Button x:Name="btn_Add" Content="Dodaj" Margin="238,281,482,107" Click="Button_Click_Add"/>

@@ -32,3 +32,13 @@ D:\PrazaInz\WpfApp1\obj\Debug\net5.0-windows\WindowConfiguration.g.cs
 D:\PrazaInz\WpfApp1\obj\Debug\net5.0-windows\WindowAddToListQueues.g.cs
 D:\PrazaInz\WpfApp1\obj\Debug\net5.0-windows\WindowConfiguration.baml
 D:\PrazaInz\WpfApp1\obj\Debug\net5.0-windows\WindowAddToListQueues.baml
+D:\PrazaInz\WpfApp1\bin\Debug\net5.0-windows\Microsoft.EntityFrameworkCore.dll
+D:\PrazaInz\WpfApp1\bin\Debug\net5.0-windows\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\PrazaInz\WpfApp1\bin\Debug\net5.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
+D:\PrazaInz\WpfApp1\bin\Debug\net5.0-windows\Microsoft.Extensions.Caching.Memory.dll
+D:\PrazaInz\WpfApp1\bin\Debug\net5.0-windows\Microsoft.Extensions.DependencyInjection.dll
+D:\PrazaInz\WpfApp1\bin\Debug\net5.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\PrazaInz\WpfApp1\bin\Debug\net5.0-windows\Microsoft.Extensions.Logging.dll
+D:\PrazaInz\WpfApp1\bin\Debug\net5.0-windows\Microsoft.Extensions.Options.dll
+D:\PrazaInz\WpfApp1\bin\Debug\net5.0-windows\Microsoft.Extensions.Primitives.dll
+D:\PrazaInz\WpfApp1\bin\Debug\net5.0-windows\System.Diagnostics.DiagnosticSource.dll
