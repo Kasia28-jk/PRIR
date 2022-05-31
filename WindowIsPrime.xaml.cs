@@ -8,11 +8,18 @@ namespace WpfApp1
     {
         private QueueProvider _queueProvider = new();
         private List<string> _queueToDisplay;
-        public WindowIsPrime()
+        private readonly DataContext _dataContext;
+        private readonly MessageProvider _messageProvider;
+        private readonly DatabaseHelper _databaseHelper;
+
+        public WindowIsPrime(DataContext dataContext)
         {
             InitializeComponent();
             _queueToDisplay = _queueProvider.LoadList();
             cmb_Queues.ItemsSource = _queueToDisplay;
+            _dataContext = dataContext;
+            _messageProvider = new MessageProvider();
+            _databaseHelper = new DatabaseHelper(dataContext);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -30,13 +37,16 @@ namespace WpfApp1
                 throw;
             }
 
-            var message = name + value;
-            var connection = new RabbitServer();
-            if (queue != null)
+            var zadanie = new Zadanie()
             {
-                connection.QueueName = queue;
-            }
-            connection.SendMessage(message);
+                NazwaZadania = name,
+                WartośćDoPoliczenia = value,
+                status = false
+            };
+
+            _databaseHelper.AddToDataBase(zadanie);
+            var id = _databaseHelper.CheckId(zadanie);
+            _messageProvider.SendMessage(id, name, value, queue);
         }
     }
 }

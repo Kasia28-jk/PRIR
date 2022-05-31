@@ -13,7 +13,7 @@ namespace WpfApp1
        
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            var win = new WindowFibonacci();
+            var win = new WindowFibonacci(_context);
             win.Show();
         }
 
