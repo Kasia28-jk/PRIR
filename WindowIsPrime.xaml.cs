@@ -14,16 +14,20 @@ namespace WpfApp1
         private readonly DataContext _dataContext;
         private readonly MessageProvider _messageProvider;
         private readonly DatabaseHelper _databaseHelper;
+        private readonly bool _isNewConfiguration;
+        private int _idConfiguracji;
 
-        public WindowIsPrime(DataContext dataContext)
+        public WindowIsPrime(DataContext dataContext, bool isNewConfiguration, int idConfiguracji)
         {
             InitializeComponent();
-            cmb_Queues.ItemsSource = _queueToDisplay;
             _dataContext = dataContext;
-            _messageProvider = new MessageProvider();
             _databaseHelper = new DatabaseHelper(dataContext);
             _queueProvider = new QueueProvider(_dataContext);
             _queueToDisplay = _queueProvider.LoadList();
+            cmb_Queues.ItemsSource = _queueToDisplay;
+            _isNewConfiguration = isNewConfiguration;
+            _idConfiguracji = idConfiguracji;
+            _messageProvider = new MessageProvider(_isNewConfiguration, _idConfiguracji, _databaseHelper);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -50,7 +54,7 @@ namespace WpfApp1
             };
 
             _databaseHelper.AddToDataBase(zadanie);
-            var id = _databaseHelper.CheckId(zadanie);
+            var id = _databaseHelper.CheckIdForZadanias(zadanie);
             _messageProvider.SendMessage(id, name, value, queue);
         }
     }

@@ -18,7 +18,7 @@ namespace WpfApp1.Data
             _dataContext.SaveChanges();
         }
 
-        public int CheckId(Zadanie zadanie)
+        public int CheckIdForZadanias(Zadanie zadanie)
         {
             var zadForId = _dataContext.Zadanies.FirstOrDefault(x => x.NazwaZadania.Equals(zadanie.NazwaZadania)
                                                                      && x.WartośćDoPoliczenia.Equals(zadanie.WartośćDoPoliczenia)
@@ -26,24 +26,25 @@ namespace WpfApp1.Data
             return zadForId.ZadanieId;
         }
 
-        public void AddConfiguration(string nazwaUzytkownika,
-            string haslo,
-            string hostname,
-            string vhostname,
-            int port,
-            string nazwaKolejki)
+        public void AddConfiguration(Konfiguracja konfiguracja)
         {
-            var konfiguracja = new Konfiguracja()
-            {
-                NazwaUzytkownika = nazwaUzytkownika,
-                Hasło = haslo,
-                HostName = hostname,
-                VHostName = vhostname,
-                Port = port,
-                NazwaKolejki = nazwaKolejki
-            };
             _dataContext.Konfiguracjas.Add(konfiguracja);
             _dataContext.SaveChanges();
+        }
+
+        public int CheckIdForKonfiguracjas(Konfiguracja konfiguracja)
+        {
+            var zadForId = _dataContext.Konfiguracjas.FirstOrDefault(x => x.NazwaKolejki.Equals(konfiguracja.NazwaKolejki)
+            && x.Hasło.Equals(konfiguracja.Hasło) && x.HostName.Equals(konfiguracja.HostName)
+            && x.NazwaUzytkownika.Equals(konfiguracja.NazwaUzytkownika) && x.Port.Equals(konfiguracja.Port)
+            && x.VHostName.Equals(konfiguracja.VHostName));
+            return zadForId.KonfiguracjaId;
+        }
+
+        public Konfiguracja FindConfiguration(int id)
+        {
+            var konfiguracja = _dataContext.Konfiguracjas.FirstOrDefault(x => x.KonfiguracjaId.Equals(id));
+            return konfiguracja;
         }
     }
 }

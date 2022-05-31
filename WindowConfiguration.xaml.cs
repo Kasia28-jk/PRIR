@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Windows;
 using WpfApp1.Data;
+using WpfApp1.Models;
 
 namespace WpfApp1
 {
@@ -15,6 +16,7 @@ namespace WpfApp1
         private QueueProvider _queueProvider;
         private List<string> _queueToDisplay;
         private bool _IsNewConfiguration;
+        private int _idConfiguracji;
 
         public WindowConfiguration(DataContext dataContext)
         {
@@ -43,13 +45,35 @@ namespace WpfApp1
                 throw;
             }
             var nazwaKolejki = (string)cmb_Queues.SelectedItem;
-            _databaseHelper.AddConfiguration(nazwaUzytkownika, haslo, hostname, vhostname, port, nazwaKolejki);
+
+            var konfiguracja = new Konfiguracja()
+            {
+                NazwaUzytkownika = nazwaUzytkownika,
+                Hasło = haslo,
+                HostName = hostname,
+                VHostName = vhostname,
+                Port = port,
+                NazwaKolejki = nazwaKolejki
+            };
+
+            _databaseHelper.AddConfiguration(konfiguracja);
             _IsNewConfiguration = true;
+            _idConfiguracji = _databaseHelper.CheckIdForKonfiguracjas(konfiguracja);
         }
 
         public bool IsNewKonfiguration()
         {
             return _IsNewConfiguration;
+        }
+
+        public int idOfConfiguration()
+        {
+            if (_idConfiguracji != null)
+            {
+                return _idConfiguracji;
+            }
+
+            return 1; //domyslne 
         }
 
         private void Button_Click2(object sender, RoutedEventArgs e)
