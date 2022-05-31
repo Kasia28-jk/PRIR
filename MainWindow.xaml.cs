@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using WpfApp1.Data;
 
 namespace WpfApp1
 {
@@ -19,7 +20,7 @@ namespace WpfApp1
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            var win = new WindowIsPrime();
+            var win = new WindowIsPrime(_context);
             win.Show();
         }
 

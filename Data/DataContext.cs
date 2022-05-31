@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
+using WpfApp1.Models;
 
-namespace WpfApp1
+namespace WpfApp1.Data
 {
     public class DataContext : DbContext
     {

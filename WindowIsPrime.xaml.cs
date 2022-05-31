@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows;
+using WpfApp1.Data;
+using WpfApp1.Message;
+using WpfApp1.Models;
 
 namespace WpfApp1
 {
@@ -27,6 +30,7 @@ namespace WpfApp1
             var queue = (string)cmb_Queues.SelectedItem;
             int value;
             const string name = "Prime ";
+
             try
             {
                 value = Convert.ToInt32(txt_NumberToCheck.Text);
