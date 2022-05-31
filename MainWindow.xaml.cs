@@ -26,7 +26,7 @@ namespace WpfApp1
 
         private void Button_Click_Add(object sender, RoutedEventArgs e)
         {
-            var win = new WindowAddToListQueues();
+            var win = new WindowAddToListQueues(_context);
             win.Show();
         }
 

@@ -1,59 +1,51 @@
 ﻿using System.Collections.Generic;
-using System.IO;
+using System.Linq;
+using WpfApp1.Data;
+using WpfApp1.Models;
 
 namespace WpfApp1
 {
     public class QueueProvider
     {
+        private readonly DataContext _dataContext;
         private List<string> _queues = new List<string>();
         public List<string> Queues { get => _queues; set => _queues = value; }
 
+        public QueueProvider(DataContext dataContext)
+        {
+            _dataContext = dataContext;
+        }
+
         public bool AddQueue(string nameOfQueue)
         {
-            var list = LoadList();
-            var state = true;
-            if (list != null)
+            var queue = _dataContext.Kolejkas.SingleOrDefault(x => x.NazwaKolejki.Equals(nameOfQueue));
+            var state = false;
+
+            if (queue == null)
             {
-                foreach (var name in list)
+                var newQueue = new Kolejka()
                 {
-                    if (nameOfQueue.Equals(name))
-                    {
-                        state = false;
-                    }
-                }
+                    NazwaKolejki = nameOfQueue
+                };
 
-                if (!state) return false;
-                _queues.Add(nameOfQueue);
-                SaveInFile();
-                return true;
-
+                _dataContext.Kolejkas.Add(newQueue);
+                _dataContext.SaveChanges();
+                state = true;
             }
 
-            return false;
+            return state;
         }
 
         public List<string> LoadList()
         {
-            using (var sr = new StreamReader("queues.txt"))
-            {
-                string line;
-                while ((line = sr.ReadLine()) != null)
-                {
-                    _queues.Add(line);
-                }
-            }
+            var kolejki = _dataContext.Kolejkas.Select(x => CreateQueue(x)).ToList();
+            _queues = kolejki;
             return _queues;
         }
 
-        private void SaveInFile()
+        private static string CreateQueue(Kolejka x)
         {
-            using (var sw = new StreamWriter("queues.txt"))
-            {
-                foreach (var queue in _queues)
-                {
-                  sw.WriteLine(queue);  
-                }
-            }
+            return x.NazwaKolejki;
         }
     }
 }

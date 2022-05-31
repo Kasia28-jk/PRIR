@@ -1,23 +1,32 @@
 ﻿using System.Windows;
+using WpfApp1.Data;
+
 namespace WpfApp1
 {
     public partial class WindowAddToListQueues : Window
     {
-        public WindowAddToListQueues()
+        private readonly DataContext _dataContext;
+        private readonly QueueProvider _queueProvider;
+        public WindowAddToListQueues(DataContext dataContext)
         {
             InitializeComponent();
+            _dataContext = dataContext;
+            _queueProvider = new QueueProvider(_dataContext);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             var queueToAdd = txt_NameOfQueue.Text;
-            var queue = new QueueProvider();
-            var status = queue.AddQueue(queueToAdd);
+            var status = _queueProvider.AddQueue(queueToAdd);
+
             if (!status)
             {
                 MessageBox.Show("Taka nazwa już istnieje!");
             }
-            MessageBox.Show("Dodano!");
+            else
+            {
+                MessageBox.Show("Dodano!");
+            }
         }
     }
 }

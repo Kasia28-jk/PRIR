@@ -9,7 +9,7 @@ namespace WpfApp1
 {
     public partial class WindowIsPrime : Window
     {
-        private QueueProvider _queueProvider = new();
+        private QueueProvider _queueProvider;
         private List<string> _queueToDisplay;
         private readonly DataContext _dataContext;
         private readonly MessageProvider _messageProvider;
@@ -18,11 +18,12 @@ namespace WpfApp1
         public WindowIsPrime(DataContext dataContext)
         {
             InitializeComponent();
-            _queueToDisplay = _queueProvider.LoadList();
             cmb_Queues.ItemsSource = _queueToDisplay;
             _dataContext = dataContext;
             _messageProvider = new MessageProvider();
             _databaseHelper = new DatabaseHelper(dataContext);
+            _queueProvider = new QueueProvider(_dataContext);
+            _queueToDisplay = _queueProvider.LoadList();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
