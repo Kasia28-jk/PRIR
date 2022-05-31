@@ -6,10 +6,13 @@ namespace WpfApp1
     public partial class MainWindow : Window
     {
         private readonly DataContext _context;
+        private bool _isNewConfiguration;
         public MainWindow()
         {
             InitializeComponent();
             _context = new DataContext();
+            var win = new WindowConfiguration(_context);
+            _isNewConfiguration = win.IsNewKonfiguration();
         }
        
         private void Button_Click_1(object sender, RoutedEventArgs e)
@@ -32,7 +35,7 @@ namespace WpfApp1
 
         private void Button_Click_Config(object sender, RoutedEventArgs e)
         {
-            var win = new WindowConfiguration();
+            var win = new WindowConfiguration(_context);
             win.Show();
         }
     }

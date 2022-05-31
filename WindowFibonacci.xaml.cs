@@ -14,8 +14,9 @@ namespace WpfApp1
         private readonly DataContext _dataContext;
         private readonly MessageProvider _messageProvider;
         private readonly DatabaseHelper _databaseHelper;
+        private readonly bool _isNewConfiguration;
 
-        public WindowFibonacci(DataContext dataContext)
+        public WindowFibonacci(DataContext dataContext, bool isNewConfiguration)
         {
             InitializeComponent();
             _dataContext = dataContext;
@@ -24,6 +25,7 @@ namespace WpfApp1
             _queueProvider = new QueueProvider(_dataContext);
             _queueToDisplay = _queueProvider.LoadList();
             cmb_Queues.ItemsSource = _queueToDisplay;
+            _isNewConfiguration = isNewConfiguration;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

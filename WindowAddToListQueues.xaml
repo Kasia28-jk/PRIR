@@ -9,7 +9,7 @@
     <Grid>
         <TextBox x:Name="txt_NameOfQueue" TextWrapping="Wrap" Margin="182,62,416,328" Text="test2"/>
         <Label Content="Nazwa kolejki:" HorizontalAlignment="Left" Margin="52,66,0,0" VerticalAlignment="Top" Height="43" Width="156"/>
-        <Button Content="Button" Margin="487,49,192,317" Click="Button_Click"/>
+        <Button Content="Dodaj" Margin="487,49,192,317" Click="Button_Click"/>
 
     </Grid>
 </Window>

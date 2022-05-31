@@ -8,7 +8,6 @@
         Title="WindowConfiguration" Height="450" Width="800">
     <Grid>
         <Button Content="Zapisz" Margin="520,292,35,23" Click="Button_Click"/>
-        <TextBox x:Name="txt_NameOfQueue" TextWrapping="Wrap" Margin="160,352,438,39" Text="test2"/>
         <Label Content="Nazwa kolejki:" HorizontalAlignment="Left" Margin="29,356,0,0" VerticalAlignment="Top" Height="43" Width="157"/>
         <TextBox x:Name="txt_UserName" TextWrapping="Wrap" Margin="160,20,438,371" Text="quest"/>
         <Label Content="Nazwa Użytkownika:" HorizontalAlignment="Left" Margin="29,30,0,0" VerticalAlignment="Top" Height="43" Width="157"/>
@@ -20,6 +19,8 @@
         <Label Content="VHostName:" HorizontalAlignment="Left" Margin="29,230,0,0" VerticalAlignment="Top" Height="43" Width="157"/>
         <TextBox x:Name="txt_Port" TextWrapping="Wrap" Margin="160,282,438,109" Text="5672"/>
         <Label Content="Port:" HorizontalAlignment="Left" Margin="29,292,0,0" VerticalAlignment="Top" Height="43" Width="157"/>
+        <ComboBox x:Name="cmb_Queues" Margin="160,352,438,23" />
+        <Button Content="Użyj domyślnej" Margin="520,30,35,285" Click="Button_Click2"/>
 
     </Grid>
 </Window>

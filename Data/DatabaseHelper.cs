@@ -25,5 +25,25 @@ namespace WpfApp1.Data
                                                                      && x.status.Equals(false));
             return zadForId.ZadanieId;
         }
+
+        public void AddConfiguration(string nazwaUzytkownika,
+            string haslo,
+            string hostname,
+            string vhostname,
+            int port,
+            string nazwaKolejki)
+        {
+            var konfiguracja = new Konfiguracja()
+            {
+                NazwaUzytkownika = nazwaUzytkownika,
+                Hasło = haslo,
+                HostName = hostname,
+                VHostName = vhostname,
+                Port = port,
+                NazwaKolejki = nazwaKolejki
+            };
+            _dataContext.Konfiguracjas.Add(konfiguracja);
+            _dataContext.SaveChanges();
+        }
     }
 }
