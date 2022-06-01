@@ -7,6 +7,8 @@
         mc:Ignorable="d"
         Title="WindowStatusZadan" Height="450" Width="800">
     <Grid>
-        
+        <DataGrid x:Name="statusZadan"  Margin="26,20,172,171" />
+        <TextBox x:Name="txtIdZadania" TextWrapping="Wrap" Width="120" Margin="48,338,632,55"/>
+        <Button x:Name="Button_Delete1" Content="Usuń" Margin="206,330,511,47" Click="Button_Delete"/>
     </Grid>
 </Window>

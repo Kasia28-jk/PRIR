@@ -27,7 +27,7 @@ namespace WpfApp1
             cmb_Queues.ItemsSource = _queueToDisplay;
             _isNewConfiguration = isNewConfiguration;
             _idConfiguracji = idConfiguracji;
-            _messageProvider = new MessageProvider(_isNewConfiguration, _idConfiguracji, _databaseHelper);
+            _messageProvider = new MessageProvider(_isNewConfiguration, _idConfiguracji, _dataContext);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

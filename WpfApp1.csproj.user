@@ -7,7 +7,7 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="StatusZadan.xaml.cs">
+    <Compile Update="WindowStatusZadan.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="WindowAddToListQueues.xaml.cs">
@@ -27,7 +27,7 @@
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="StatusZadan.xaml">
+    <Page Update="WindowStatusZadan.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="WindowAddToListQueues.xaml">

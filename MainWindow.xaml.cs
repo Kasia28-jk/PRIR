@@ -48,7 +48,7 @@ namespace WpfApp1
 
         private void Button_Click_StatusZadan(object sender, RoutedEventArgs e)
         {
-            var win = new WindowStatusZadan();
+            var win = new WindowStatusZadan(_context, _isNewConfiguration, _idConfiguracji);
             win.Show();
         }
     }

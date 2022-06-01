@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using WpfApp1.Models;
 
 namespace WpfApp1.Data
@@ -45,6 +46,32 @@ namespace WpfApp1.Data
         {
             var konfiguracja = _dataContext.Konfiguracjas.FirstOrDefault(x => x.KonfiguracjaId.Equals(id));
             return konfiguracja;
+        }
+
+        public void UpdateTaskow(string idTaska, bool status)
+        {
+            int id;
+            try
+            {
+                id = int.Parse(idTaska);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+
+            var zadanie = _dataContext.Zadanies.FirstOrDefault(x => x.ZadanieId.Equals(id));
+            zadanie.status = status;
+            _dataContext.Zadanies.Update(zadanie);
+            _dataContext.SaveChanges();
+        }
+
+        public void UsunZadanie(int id)
+        {
+            var zadanie = _dataContext.Zadanies.SingleOrDefault(x => x.ZadanieId.Equals(id));
+            _dataContext.Zadanies.Remove(zadanie);
+            _dataContext.SaveChanges();
         }
     }
 }
