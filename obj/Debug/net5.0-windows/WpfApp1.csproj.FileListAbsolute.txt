@@ -91,3 +91,4 @@ D:\PrazaInz\WpfApp1\bin\Debug\net5.0-windows\runtimes\win-x86\native\e_sqlite3.d
 D:\PrazaInz\WpfApp1\bin\Debug\net5.0-windows\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 D:\PrazaInz\WpfApp1\obj\Debug\net5.0-windows\WindowStatusZadan.g.cs
 D:\PrazaInz\WpfApp1\obj\Debug\net5.0-windows\WindowStatusZadan.baml
+D:\PrazaInz\WpfApp1\bin\Debug\net5.0-windows\FontAwesome.Sharp.dll

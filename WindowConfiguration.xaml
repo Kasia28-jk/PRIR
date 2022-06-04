@@ -4,23 +4,37 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
+        xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
         mc:Ignorable="d"
         Title="WindowConfiguration" Height="450" Width="800">
-    <Grid>
-        <Button Content="Zapisz" Margin="520,292,35,23" Click="Button_Click"/>
-        <Label Content="Nazwa kolejki:" HorizontalAlignment="Left" Margin="29,356,0,0" VerticalAlignment="Top" Height="43" Width="157"/>
+    <Grid Background="#FF313066">
+        <Label Content="Nazwa kolejki:" FontSize="14" Foreground="Chocolate" HorizontalAlignment="Left" Margin="20,356,0,0" VerticalAlignment="Top" Height="43" Width="157"/>
         <TextBox x:Name="txt_UserName" TextWrapping="Wrap" Margin="160,20,438,371" Text="quest"/>
-        <Label Content="Nazwa Użytkownika:" HorizontalAlignment="Left" Margin="29,30,0,0" VerticalAlignment="Top" Height="43" Width="157"/>
+        <Label Content="Nazwa Użytkownika:" Foreground="Chocolate" FontSize="14" HorizontalAlignment="Left" Margin="20,30,0,0" VerticalAlignment="Top" Height="43" Width="157"/>
         <TextBox x:Name="txt_Password" TextWrapping="Wrap" Margin="160,79,438,312" Text="quest"/>
-        <Label Content="Hasło:" HorizontalAlignment="Left" Margin="29,89,0,0" VerticalAlignment="Top" Height="43" Width="157"/>
+        <Label Content="Hasło:" FontSize="14" Foreground="Chocolate" HorizontalAlignment="Left" Margin="20,89,0,0" VerticalAlignment="Top" Height="43" Width="157"/>
         <TextBox x:Name="txt_HostName" TextWrapping="Wrap" Margin="160,151,438,240" Text="localhost"/>
-        <Label Content="HostName:" HorizontalAlignment="Left" Margin="29,161,0,0" VerticalAlignment="Top" Height="43" Width="157"/>
+        <Label Content="HostName:" FontSize="14" Foreground="Chocolate" HorizontalAlignment="Left" Margin="20,161,0,0" VerticalAlignment="Top" Height="43" Width="157"/>
         <TextBox x:Name="txt_VHostName" TextWrapping="Wrap" Margin="160,220,438,171"/>
-        <Label Content="VHostName:" HorizontalAlignment="Left" Margin="29,230,0,0" VerticalAlignment="Top" Height="43" Width="157"/>
+        <Label Content="VHostName:" FontSize="14" Foreground="Chocolate" HorizontalAlignment="Left" Margin="20,230,0,0" VerticalAlignment="Top" Height="43" Width="157"/>
         <TextBox x:Name="txt_Port" TextWrapping="Wrap" Margin="160,282,438,109" Text="5672"/>
-        <Label Content="Port:" HorizontalAlignment="Left" Margin="29,292,0,0" VerticalAlignment="Top" Height="43" Width="157"/>
+        <Label Content="Port:" FontSize="14" Foreground="Chocolate" HorizontalAlignment="Left" Margin="20,292,0,0" VerticalAlignment="Top" Height="43" Width="157"/>
         <ComboBox x:Name="cmb_Queues" Margin="160,352,438,23" />
-        <Button Content="Użyj domyślnej" Margin="520,30,35,285" Click="Button_Click2"/>
-
+        <Button x:Name="btn_settings3" Height="105" Margin="272,307,-252,0" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Chocolate" FontSize="36" Click="Button_Click" Visibility="Visible">
+            <Button.Content>
+                <StackPanel Orientation="Horizontal" Width="350" Height="60">
+                    <fa:IconBlock Icon="Save"  FontSize="36" Margin="0,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <TextBlock Text=" Zapisz" Width="300"/>
+                </StackPanel>
+            </Button.Content>
+        </Button>
+        <Button x:Name="btn_settings2" Height="104" Margin="194,14,-174,0" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Chocolate" FontSize="36" Click="Button_Click2" Visibility="Visible">
+            <Button.Content>
+                <StackPanel Orientation="Horizontal" Width="390" Height="60">
+                    <fa:IconBlock Icon="Save"  FontSize="36" Margin="0,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <TextBlock Text=" Domyślne ustawienia" Width="400"/>
+                </StackPanel>
+            </Button.Content>
+        </Button>
     </Grid>
 </Window>

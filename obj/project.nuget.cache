@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "TYOhErhmFjbZDpCIof/0AiOqyk/tZSf9ZSvt21dZ92LGT94i08oqulkw7wmhPsR7zZkxU5hVaBrUKTqEXweLuQ==",
+  "dgSpecHash": "GB3RDwkFwfxEUhD5bioHR5/AXbuBIsgSRakygSYZIyICrPlq8DH4BuqpI+mQY8D8rz3amdVEJSWLXm7H0hjmiQ==",
   "success": true,
   "projectFilePath": "D:\\PrazaInz\\WpfApp1\\WpfApp1.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\kasia\\.nuget\\packages\\fontawesome.sharp\\5.15.4\\fontawesome.sharp.5.15.4.nupkg.sha512",
     "C:\\Users\\kasia\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\kasia\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\kasia\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",

@@ -4,12 +4,21 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
+        xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
         mc:Ignorable="d"
         Title="WindowAddToListQueues" Height="450" Width="800">
-    <Grid>
-        <TextBox x:Name="txt_NameOfQueue" TextWrapping="Wrap" Margin="182,62,416,328" Text="test2"/>
-        <Label Content="Nazwa kolejki:" HorizontalAlignment="Left" Margin="52,66,0,0" VerticalAlignment="Top" Height="43" Width="156"/>
-        <Button Content="Dodaj" Margin="487,49,192,317" Click="Button_Click"/>
+    <Grid Background="#FF313066">
+        <Button x:Name="btn_settings3" Height="105" Margin="182,259,-162,0" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Chocolate" FontSize="36" Click="Button_Click" Visibility="Visible">
+            <Button.Content>
+                <StackPanel Orientation="Horizontal" Width="350" Height="60">
+                    <fa:IconBlock Icon="FolderPlus"  FontSize="36" Margin="0,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <TextBlock Text=" Dodaj kolejke" Width="300"/>
+                </StackPanel>
+            </Button.Content>
+        </Button>
+        <TextBox x:Name="txt_NameOfQueue" TextWrapping="Wrap" Margin="402,54,196,336" Text="test2"/>
+        <Label Content="Nazwa kolejki:" HorizontalAlignment="Left" Margin="61,45,0,0" VerticalAlignment="Top" Height="106" Width="487" Foreground="Chocolate" FontSize="36"/>
+
 
     </Grid>
 </Window>

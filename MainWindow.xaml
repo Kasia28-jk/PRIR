@@ -4,19 +4,56 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
+        xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <Button Content="Wybierz" Margin="238,51,482,337" Click="Button_Click_1"/>
-        <Label Content="Fibonacci" HorizontalAlignment="Left" Margin="36,61,0,0" VerticalAlignment="Top" Width="98"/>
-        <Button Content="Wybierz" Margin="238,127,482,261" Click="Button_Click_2"/>
-        <Label Content="Czy liczba jest pierwsza?" HorizontalAlignment="Left" Margin="36,137,0,0" VerticalAlignment="Top" Width="143"/>
-        <Button Content="Config" Margin="238,346,482,42" Click="Button_Click_Config"/>
-        <Label Content="Konfiguracja:" HorizontalAlignment="Left" Margin="36,356,0,0" VerticalAlignment="Top" Width="143"/>
-        <Button x:Name="btn_Add" Content="Dodaj" Margin="238,281,482,107" Click="Button_Click_Add"/>
-        <Label Content="Dodanie kolejki" HorizontalAlignment="Left" Margin="36,291,0,0" VerticalAlignment="Top" Width="143"/>
-        <Button Content="Sprawdz!" Margin="616,59,104,329" Click="Button_Click_StatusZadan"/>
-        <Label Content="Sprawdz status zadan" HorizontalAlignment="Left" Margin="441,69,0,0" VerticalAlignment="Top" Width="170"/>
-
+        Title="MainWindow" Height="450" Width="800"
+        >
+    <Grid Background="#FF313066">
+        <Grid Background="#FF1F1E44" Margin="0,0,450,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="263*"/>
+                <ColumnDefinition Width="10*"/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="btn_settings" Height="105" Margin="20,0,0,0" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Chocolate" FontSize="36" Click="Button_Click_Config" Visibility="Visible">
+                <Button.Content>
+                    <StackPanel Orientation="Horizontal" Width="350" Height="60">
+                        <fa:IconBlock Icon="Cog"  FontSize="36" Margin="0,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        <TextBlock Text=" Konfiguracja" Width="269"/>
+                    </StackPanel>
+                </Button.Content>
+            </Button>
+            <Button x:Name="btn_settings5" Height="105" Margin="20,200,0,0" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Chocolate" FontSize="36" Click="Button_Click_StatusZadan" Visibility="Visible">
+                <Button.Content>
+                    <StackPanel Orientation="Horizontal" Width="350" Height="60">
+                        <fa:IconBlock Icon="Tasks"  FontSize="36" Margin="0,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        <TextBlock Text=" Status Zadań" Width="300"/>
+                    </StackPanel>
+                </Button.Content>
+            </Button>
+            <Button x:Name="btn_settings3" Height="105" Margin="20,100,0,0" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Chocolate" FontSize="36" Click="Button_Click_Add" Visibility="Visible">
+                <Button.Content>
+                    <StackPanel Orientation="Horizontal" Width="350" Height="60">
+                        <fa:IconBlock Icon="FolderPlus"  FontSize="36" Margin="0,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        <TextBlock Text=" Dodaj kolejke" Width="300"/>
+                    </StackPanel>
+                </Button.Content>
+            </Button>
+        </Grid>
+        <Button x:Name="btn_settings2" Height="105" Margin="300,0,0,0" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Chocolate" FontSize="36" Click="Button_Click_1" Visibility="Visible">
+            <Button.Content>
+                <StackPanel Orientation="Horizontal" Width="350" Height="60">
+                    <fa:IconBlock Icon="Calculator"  FontSize="36" Margin="0,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <TextBlock Text=" Ciąg Fibannaciego" Width="300"/>
+                </StackPanel>
+            </Button.Content>
+        </Button>
+        <Button x:Name="btn_settings4" Height="105" Margin="300,100,0,0" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Chocolate" FontSize="36" Click="Button_Click_2" Visibility="Visible">
+            <Button.Content>
+                <StackPanel Orientation="Horizontal" Width="350" Height="60">
+                    <fa:IconBlock Icon="Calculator"  FontSize="36" Margin="0,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <TextBlock Text=" Liczba Pierwsza" Width="300"/>
+                </StackPanel>
+            </Button.Content>
+        </Button>
     </Grid>
 </Window>
