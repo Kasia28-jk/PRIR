@@ -4,11 +4,20 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
+        xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
         mc:Ignorable="d"
         Title="WindowStatusZadan" Height="450" Width="800">
-    <Grid>
+    <Grid Background="#FF313066">
+        <Button x:Name="btn_settings3" Height="105" Margin="206,302,-186,0" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Chocolate" FontSize="36" Click="Button_Click" Visibility="Visible">
+            <Button.Content>
+                <StackPanel Orientation="Horizontal" Width="350" Height="60">
+                    <fa:IconBlock Icon="Dumpster"  FontSize="36" Margin="0,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <TextBlock Text=" Usuń zadanie" Width="300"/>
+                </StackPanel>
+            </Button.Content>
+        </Button>
         <DataGrid x:Name="statusZadan"  Margin="26,20,172,171" />
-        <TextBox x:Name="txtIdZadania" TextWrapping="Wrap" Width="120" Margin="48,338,632,55"/>
-        <Button x:Name="Button_Delete1" Content="Usuń" Margin="206,330,511,47" Click="Button_Delete"/>
+        <Label Content="Id zadania:"  Foreground="Chocolate" FontSize="36" HorizontalAlignment="Left" Margin="26,320,0,0" VerticalAlignment="Top" Height="79" Width="344"/>
+        <TextBox x:Name="txtIdZadania" TextWrapping="Wrap" Width="120" Margin="250,334,430,59"/>
     </Grid>
 </Window>

@@ -4,13 +4,22 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
+        xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
         mc:Ignorable="d"
         Title="WindowIsPrime" Height="450" Width="800">
-    <Grid>
-        <Button Content="Wyślij " Margin="448,255,107,60" Click="Button_Click"/>
-        <TextBox x:Name="txt_NumberToCheck" TextWrapping="Wrap" Margin="194,64,404,327" Text="2"/>
-        <Label Content="Podaj liczbę:" HorizontalAlignment="Left" Margin="78,64,0,0" VerticalAlignment="Top" Height="43" Width="157"/>
-        <Label Content="Podaj nazwę kolejki:" HorizontalAlignment="Left" Margin="78,148,0,0" VerticalAlignment="Top" Height="43" Width="157"/>
-        <ComboBox x:Name="cmb_Queues" Margin="194,132,404,243"/>
+    <Grid Background="#FF313066">
+        <Button x:Name="btn_settings3" Height="105" Margin="182,259,-162,0" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Chocolate" FontSize="36" Click="Button_Click" Visibility="Visible">
+            <Button.Content>
+                <StackPanel Orientation="Horizontal" Width="350" Height="60">
+                    <fa:IconBlock Icon="PaperPlane"  FontSize="36" Margin="0,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <TextBlock Text=" Wyślij zadanie" Width="300"/>
+                </StackPanel>
+            </Button.Content>
+        </Button>
+
+        <TextBox x:Name="txt_NumberToCheck" TextWrapping="Wrap" Margin="471,82,127,309" Text="2"/>
+        <Label Content="Podaj liczbę:" Foreground="Chocolate" FontSize="36" HorizontalAlignment="Left" Margin="78,64,0,0" VerticalAlignment="Top" Height="67" Width="345"/>
+        <Label Content="Podaj nazwę kolejki:" Foreground="Chocolate" FontSize="36" HorizontalAlignment="Left" Margin="78,148,0,0" VerticalAlignment="Top" Height="69" Width="322"/>
+        <ComboBox x:Name="cmb_Queues" Margin="471,148,127,227"/>
     </Grid>
 </Window>
